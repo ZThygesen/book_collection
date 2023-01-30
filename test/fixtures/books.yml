@@ -2,6 +2,12 @@
 
 one:
   title: MyString
+  author: MyString
+  price: 9.99
+  publishedDate: 2023-01-30
 
 two:
   title: MyString
+  author: MyString
+  price: 9.99
+  publishedDate: 2023-01-30
