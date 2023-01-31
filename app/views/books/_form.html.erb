@@ -14,7 +14,18 @@
   <div>
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>
+
+    <%= form.label :author, style: "display: block" %>
+    <%= form.text_field :author %>
+
+    <%= form.label :price, style: "display: block" %>
+    <%= form.number_field :price, step: 0.01 %>
+
+    <%= form.label :publishedDate, style: "display: block" %>
+    <%= form.date_field :publishedDate %>
   </div>
+
+  <br />
 
   <div>
     <%= form.submit %>
