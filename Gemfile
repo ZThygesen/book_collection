@@ -76,4 +76,6 @@ end
 gem "yaml_db"
 
 gem "rexml"
-
+gem "rspec-rails"
+gem "brakeman"
+gem "rubocop"
