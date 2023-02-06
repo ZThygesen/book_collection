@@ -18,7 +18,7 @@
 
   <div>
     <%= form.label :book_id, style: "display: block" %>
-    <%= form.select :book_id, Book.order(:titlr).map { |book| [book.title, book.id] }, include_blank: true, id: "id_of_the_book_id_select_box" %>
+    <%= form.select :book_id, Book.order(:title).map { |book| [book.title, book.id] }, include_blank: true, id: "id_of_the_book_id_select_box" %>
   </div>
 
   <div>
