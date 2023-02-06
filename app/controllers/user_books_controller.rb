@@ -25,7 +25,7 @@ class UserBooksController < ApplicationController
 
     respond_to do |format|
       if @user_book.save
-        format.html { redirect_to user_book_url(@user_book), notice: "User book was successfully created." }
+        format.html { redirect_to user_books_url, notice: "User book was successfully created." }
         format.json { render :show, status: :created, location: @user_book }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,13 +38,17 @@ class UserBooksController < ApplicationController
   def update
     respond_to do |format|
       if @user_book.update(user_book_params)
-        format.html { redirect_to user_book_url(@user_book), notice: "User book was successfully updated." }
+        format.html { redirect_to user_books_url, notice: "User book was successfully updated." }
         format.json { render :show, status: :ok, location: @user_book }
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @user_book.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def delete
+    @user_book = UserBook.find(params[:id])
   end
 
   # DELETE /user_books/1 or /user_books/1.json
