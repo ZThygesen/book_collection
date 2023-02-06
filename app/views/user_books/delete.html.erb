@@ -1,0 +1,17 @@
+<div class="user_books delete">
+    <h2>Delete User Book</h2>
+
+    <%= link_to("Back to user books", user_books_path, class: 'back-link') %>
+
+    <%= form_for(@user_book, method: 'delete') do |f| %>
+        <% # url: user_book_path(@user_book), method: 'delete' %>
+
+        <p>Are you sure you want to permanently delete this user book?</p>
+        <%= render @user_book %>
+
+        <div class="form-buttons">
+            <%= f.submit("Delete User Book") %>
+        </div>
+
+    <% end %>
+</div>
