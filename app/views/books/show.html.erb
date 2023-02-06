@@ -1,8 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
-<div>
-  <%= link_to "Back to books", books_path %>
-</div>
+<%= link_to "Back to books", books_path %>
 
 <%= render @book %>
+
+<div>
+  <%= link_to "Edit this book", edit_book_path(@book) %> |
+  <%= link_to "Delete this book", delete_book_path(@book) %>
+</div>
+
 
